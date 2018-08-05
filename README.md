@@ -61,14 +61,9 @@ Resnet详解
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/9.png)
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/10.png)
 
-
 > 第四层卷积 conv4：卷积核3 x 3 x 3 x 256  卷积方式same  共2 x 6 = 12 层 6个building block，形式同上，影像变为 14 x 14 x 256
 
-
-
 > 第五层卷积 conv5：卷积核3 x 3 x 3 x 512  卷积方式same  共2 x 3 = 6 层 3个building block，形式同上，影像变为 7 x 7 x 512
-
-
 
 > average pool：2 x 2，影像变为 7 x 7 x 512
 
@@ -88,18 +83,13 @@ Resnet详解
 
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/11.png)
 
-
-
 > 第三层卷积 conv3：卷积核3 x 3 x 3 x 128  卷积方式same  共3 x 4 = 12 层 4个building block，如图所示，影像变为 28 x 28 x 512
 
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/12.png)
 
 > 第四层卷积 conv4：卷积核3 x 3 x 3 x 256  卷积方式same  共3 x 6 = 18 层 6个building block，形式同上，影像变为 14 x 14 x 1024
 
-
-
 > 第五层卷积 conv5：卷积核3 x 3 x 3 x 512  卷积方式same  共3 x 3 = 9 层 3个building block，形式同上，影像变为 7 x 7 x 2048
-
 
 > average pool：2 x 2，影像变为 7 x 7 x 2048
 
@@ -107,8 +97,8 @@ Resnet详解
 
 > 全连接层 1000，softmax，之后分类：影像变为 1 x 1000，此处为分类数，由于数据集是Imagenet，有1000类，可根据自己的数据集进行调整
 
+# 三. 代码
 
-# 三.
 
 
 # 四.
@@ -117,6 +107,4 @@ Resnet详解
 
 # 五.
 
-
-# 一.
 
