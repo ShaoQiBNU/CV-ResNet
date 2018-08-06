@@ -32,9 +32,11 @@ Resnet详解
 > 此种情况主要出现在图中不同颜色色块连接的虚线处，因为此时涉及影像size的变化，因此需要做调整。
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/4.jpg)
 
-> 网络的设计与普通网络的不同在于：每一个building block中增加了Batch Normalization即BN，没有全连接层和dropout层
+## (三) 设计
 
-## (三) 详解
+> 网络的设计与普通网络的不同在于：每一个building block中增加了Batch Normalization即BN————BN主要用于卷积层之后，激活函数之前。没有全连接层和dropout层。最终卷积结果采用全局池化，然后展平，softmax输出结果。
+
+## (四) 详解
 
 > 论文中Resnet网络结构如图所示，此处对Resnet34和Resnet50做详细解释，对每一层结构进行剖析。
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/5.png)
@@ -65,9 +67,9 @@ Resnet详解
 
 > 第五层卷积 conv5：卷积核3 x 3 x 3 x 512  卷积方式same  共2 x 3 = 6 层 3个building block，形式同上，影像变为 7 x 7 x 512
 
-> average pool：2 x 2，影像变为 7 x 7 x 512
+> 全局average pool：影像变为 1 x 1 x 512
 
-> 展平：影像变为 1 x 25088
+> 展平：影像变为 1 x 512
 
 > 全连接层 1000，softmax，之后分类：影像变为 1 x 1000，此处为分类数，由于数据集是Imagenet，有1000类，可根据自己的数据集进行调整
 
@@ -91,9 +93,9 @@ Resnet详解
 
 > 第五层卷积 conv5：卷积核3 x 3 x 3 x 512  卷积方式same  共3 x 3 = 9 层 3个building block，形式同上，影像变为 7 x 7 x 2048
 
-> average pool：2 x 2，影像变为 7 x 7 x 2048
+> 全局average pool：影像变为 1 x 1 x 2048
 
-> 展平：影像变为 1 x 100352
+> 展平：影像变为 1 x 2048
 
 > 全连接层 1000，softmax，之后分类：影像变为 1 x 1000，此处为分类数，由于数据集是Imagenet，有1000类，可根据自己的数据集进行调整
 
