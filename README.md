@@ -377,3 +377,9 @@ with tf.Session() as sess:
         print("Testing Accuracy:", sess.run(accuracy, feed_dict={x: batch_x, y: batch_y}))
 
 ```
+
+> 利用MNIST数据集，构建Resnet50网络，查看网络效果，由于输入为28 x 28，所以最后的全局池化没有用到，代码如下：
+
+```python
+
+```
