@@ -81,17 +81,17 @@ Resnet详解
 
 > max pool：3 x 3 步长stride=2  卷积方式same，影像变为 56 x 56 x 64
 
-> 第二层卷积 conv2：卷积核3 x 3 x 3 x 64  卷积方式same  共3 x 3 = 9 层 3个building block，如图所示，影像变为 56 x 56 x 256
+> 第二层卷积 conv2：卷积核1 x 1   3 x 3   1 x 1  卷积方式same  共3 x 3 = 9 层 3个building block，如图所示，影像变为 56 x 56 x 256
 
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/11.png)
 
-> 第三层卷积 conv3：卷积核3 x 3 x 3 x 128  卷积方式same  共3 x 4 = 12 层 4个building block，如图所示，影像变为 28 x 28 x 512
+> 第三层卷积 conv3：卷积核1 x 1   3 x 3   1 x 1  卷积方式same  共3 x 4 = 12 层 4个building block，如图所示，影像变为 28 x 28 x 512
 
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/12.png)
 
-> 第四层卷积 conv4：卷积核3 x 3 x 3 x 256  卷积方式same  共3 x 6 = 18 层 6个building block，形式同上，影像变为 14 x 14 x 1024
+> 第四层卷积 conv4：卷积核1 x 1   3 x 3   1 x 1  卷积方式same  共3 x 6 = 18 层 6个building block，形式同上，影像变为 14 x 14 x 1024
 
-> 第五层卷积 conv5：卷积核3 x 3 x 3 x 512  卷积方式same  共3 x 3 = 9 层 3个building block，形式同上，影像变为 7 x 7 x 2048
+> 第五层卷积 conv5：卷积核1 x 1   3 x 3   1 x 1  卷积方式same  共3 x 3 = 9 层 3个building block，形式同上，影像变为 7 x 7 x 2048
 
 > 全局average pool：影像变为 1 x 1 x 2048
 
