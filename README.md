@@ -23,7 +23,7 @@ Resnet详解
 
 ![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/2.png)
 
-> 该网络相对于普通网络没有增加任何参数，这两种结构分别针对Resnet34（左图）和Resnet50/101/152（右图），一般称整个结构为一个"building block"，其中右图又称为"bottleneck desigh"，其目的是为了减少参数的数目，第一个1x1的卷积把256维channel降到64维，然后在最后通过1x1卷积恢复，整体上用的参数数目：1x1x256x64 + 3x3x64x64 + 1x1x64x256 = 69632，而不使用bottleneck的话就是两个3x3x256的卷积，参数数目: 3x3x256x256x2 = 1179648，差了16.94倍。 对于常规ResNet，可以用于34层或者更少的网络中，对于Bottleneck Design的ResNet通常用于更深的如101这样的网络中，目的是减少计算和参数量（实用目的）。F(X,Wi)
+> 该网络相对于普通网络没有增加任何参数，这两种结构分别针对Resnet34（左图）和Resnet50/101/152（右图），一般称整个结构为一个"building block"，其中右图又称为"bottleneck desigh"，其目的是为了减少参数的数目，第一个1x1的卷积把256维channel降到64维，然后在最后通过1x1卷积恢复，整体上用的参数数目：1x1x256x64 + 3x3x64x64 + 1x1x64x256 = 69632，而不使用bottleneck的话就是两个3x3x256的卷积，参数数目: 3x3x256x256x2 = 1179648，差了16.94倍。 对于常规ResNet，可以用于34层或者更少的网络中，对于Bottleneck Design的ResNet通常用于更深的如101这样的网络中，目的是减少计算和参数量（实用目的）。
 
 > 第二种是 y=F(X,Wi)+Ws· X，当输入输出的channels个数不一致时，可以采用Ws· X做调整，如图所示：
 
