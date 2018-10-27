@@ -208,10 +208,6 @@ def Resnet34(x,n_classes):
     ####### out 输出，10类 可根据数据集进行调整 ########
     out=tf.layers.dense(flatten,n_classes)
 
-
-    ####### softmax ########
-    out=tf.nn.softmax(out)
-
     return out
 
 
@@ -227,7 +223,7 @@ cost=tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=
 optimizer=tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 
 #### accuracy 准确率 ####
-correct_pred=tf.equal(tf.argmax(pred,1),tf.argmax(y,1))
+correct_pred=tf.equal(tf.argmax(tf.nn.softmax(pred),1),tf.argmax(y,1))
 accuracy=tf.reduce_mean(tf.cast(correct_pred,tf.float32))
 
 
