@@ -694,7 +694,7 @@ git clone https://github.com/Hvass-Labs/TensorFlow-Tutorials
 
 #### (2) 下载数据集及相关处理
 
-> 数据下载及使用参考repository里发实例：https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/06_CIFAR-10.ipynb. 
+> 数据下载及使用参考repository里发实例：https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/06_CIFAR-10.ipynb. 和 https://zhuanlan.zhihu.com/p/27017189. 
 
 ## (二) 网络结构
 
