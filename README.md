@@ -680,7 +680,7 @@ with tf.Session() as sess:
 >
 > CIFAR-10数据集被划分成了5个训练的batch和1个测试的batch，每个batch均包含10000张图片。测试集batch的图片是从每个类别中随机挑选的1000张图片组成的，训练集batch以随机的顺序包含剩下的50000张图片。不过一些训练集batch可能出现包含某一类图片比其他类的图片数量多的情况。训练集batch包含来自每一类的5000张图片，一共50000张训练图片。下图显示的是数据集的类，以及每一类中随机挑选的10张图片：
 
-img13
+![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/13.png)
 
 ### 2. 数据下载及使用
 
@@ -700,7 +700,7 @@ git clone https://github.com/Hvass-Labs/TensorFlow-Tutorials
 
 > ResNet做CIFAR分类时设计的结构如下：
 
-Img14
+![image](https://github.com/ShaoQiBNU/Resnet/blob/master/images/14.png)
 
 > 第一层卷积： 3x3     stride=1     filter=16
 >
