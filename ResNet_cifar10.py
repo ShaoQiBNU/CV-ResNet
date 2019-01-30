@@ -27,7 +27,7 @@ n_classes = 10
 
 ########## placeholder ##########
 x = tf.placeholder(tf.float32, [None, image_size, image_size, num_channels])
-y = tf.placeholder(tf.float32, [None, n_classes])
+y = tf.placeholder(tf.int64, [None, n_classes])
 
 
 ######################## random generate data ###########################
